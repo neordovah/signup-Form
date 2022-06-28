@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-up Form</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="javascript.js" defer></script>
 </head>
-<body>
+<body id="body">
   <div class="container">
     <div id="left">
       <div id="text-band">
@@ -16,59 +16,62 @@
       </div>
     </div>
     <div id="right">
-      <p id="first-p">We are the one of the oldest family-oriented forums. Made by humans, for humans. We.</p>
-      <p id="second-p">Join us and come say hi!</p>
+      <div id="right-text">
+        <p id="first-p">We are the one of the oldest family-oriented forums. Made by humans, for humans. We.</p>
+        <p id="second-p">Join us and come say hi!</p>
+      </div>
 
-      <form id="form" action="#" method="get">
+      <form id="form" action="/" method="post">
         <div class="row">
           <div class="cell">
             <label for="firstName">First name <span class="required">*</span></label>
-            <input type="text" id="firstName" required pattern="[A-Za-z]">
+            <input type="text" id="firstName" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('Please enter first name')" oninput="setCustomValidity('')" class="auto-border" name="firstname">
           </div>
           <div class="cell">
             <label for="lastName">Last name <span class="required">*</span></label>
-            <input type="text" id="lastName" required pattern="[A-Za-z]">
+            <input type="text" id="lastName" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('Please enter last name')" oninput="setCustomValidity('')" class="auto-border" name="lastname">
           </div>
         </div>
-
+        
         <div class="row">
           <div class="cell">
             <label for="userName">Username <span class="required">*</span></label>
-            <input type="text" id="userName" required>
+            <input type="text" id="userName" maxlength="20" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('Please enter a username')" oninput="setCustomValidity('')" class="auto-border" name="username">
           </div>
           <div class="cell">
             <label for="age">Age</label>
-            <input type="number" id="age" min="16">
+            <input type="number" id="age" autocomplete="off" min="16" placeholder=" " oninvalid="this.setCustomValidity('Age must be equal or greater than 16')" oninput="setCustomValidity('')" class="auto-border" name="age">
           </div>
         </div>
 
         <div class="row">
           <div class="cell">
             <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('Please enter your email')" oninput="setCustomValidity('')" class="auto-border" name="email">
           </div>
           <div class="cell">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" minlength="10" pattern="[0-9]+">
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" autocomplete="off" pattern="[0-9]{10}" placeholder=" " oninvalid="this.setCustomValidity('The number must be 10 digits long')" oninput="setCustomValidity('')" class="auto-border" name="phone">
           </div>
         </div>
         <div class="row">
           <div class="cell">
             <label for="password">Password <span class="required">*</span></label>
-            <input type="password" id="pasword" required>
+            <input type="password" id="password" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('Please enter a password')" oninput="setCustomValidity('')" class="auto-border" name="password" value="">
           </div>
 
           <div class="cell">
             <label for="c_password">Confirm password <span class="required">*</span></label>
-            <input type="password" id="c_pasword" required>
+            <input type="password" id="c_password" autocomplete="off" required placeholder=" " oninvalid="this.setCustomValidity('The passwords do not match')" oninput="setCustomValidity('')">
           </div>
-        </div>
+        </div> 
 
-        <button type="submit">Submit!</button>
-        <p>Already have an account? <span><a>log in</a></span></p>
-        
+        <button type="submit" form="form" id="submit">Submit!</button>
 
       </form>
+        <div id="login"><p>Already have an account? <span><a>log in</a></span></p></div>
+        
+      
     </div>
 </div> 
 </body>
