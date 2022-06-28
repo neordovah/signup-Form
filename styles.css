@@ -148,6 +148,10 @@ a {
     color: red;
 }
 
+input {
+    transition: all .3s ease;
+}
+
 input[class="auto-border"]:valid:not(:focus):not(:placeholder-shown), .green {
     border: solid 2px green;
     box-shadow: 1px 1px greenyellow;
@@ -158,4 +162,13 @@ input[class="auto-border"]:invalid:not(:focus):not(:placeholder-shown), .red {
     box-shadow: 1px 1px orange;
 }
 
+#footer {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#footer > p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
 
