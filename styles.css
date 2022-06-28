@@ -1,19 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
+   
+}
+
+@font-face {
+    font-family: Bakso;
+    src: url(./fonts/BaksoSapi.otf);
+    font-family: Happy;
+    src: url(./fonts/KGHAPPY.ttf);
+    font-family: Skrapbook;
+    src: url(./fonts/Skrapbook.ttf);
+    font-family: amylee;
+    src: url(./fonts/Amylee_Demo.ttf);
+    font-family: Vanessia;
+    src: url(./fonts/Vanessia\ Demo.ttf);
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    min-height: 100vh;
 }
 
 #left {
     background-image: url("./img/community.jpg");
     background-size: cover;
-    width: max(300px, 35vw);
-    height: 100vh;
+    width: max(400px, 35vw);
 }
 
 #text-band {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 3rem 1rem;
+    padding: 3rem;
     position: relative;
     top: 30%;
 }
@@ -23,4 +42,83 @@
     font-size: 36px;
     text-align: center;
     color: white;
+}
+
+#right {
+    background-color: rgb(238, 238, 238);
+    width: calc(100vw - max(400px, 35vw));
+    display: flex;
+    flex-direction: column;
+}
+
+#right > p {
+    font-family: sans-serif;
+    padding: 2rem 4rem;
+}
+
+#first-p {
+    font-size: 30px;
+}
+
+#second-p {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+}
+
+#form {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: solid 2px black;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.required {
+    color: red;
+}
+
+a {
+    cursor: pointer;
+    color: purple;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form p {
+    font-size: 18px;
 }
