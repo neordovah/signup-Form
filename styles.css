@@ -6,15 +6,16 @@
 
 #left {
     background-image: url("./img/community.jpg");
+    background-size: cover;
     width: max(300px, 35vw);
     height: 100vh;
 }
 
 #text-band {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 3rem 1rem;
     position: relative;
-    top: 20%;
+    top: 30%;
 }
 
 #text-band > h1 {
